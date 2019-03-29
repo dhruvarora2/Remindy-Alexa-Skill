@@ -1,0 +1,57 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Remindy is like your mom! She can remember things for you!",
+          "examplePhrases": [
+            "Alexa tell Remindy I am keeping my checkbook in the locker",
+            "Alexa ask Remindy where is my checkbook",
+            "Alexa tell Remindy I have kept my keys on the microwave"
+          ],
+          "keywords": [
+            "Remindy",
+            "Forget",
+            "Remember",
+            "remind",
+            "me",
+            "remind",
+            "find",
+            "search",
+            "where"
+          ],
+          "name": "Remindy",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4111/64a54dd327234188a3519e896bc9fd76/APP_ICON?versionId=1iOFBCA1TP85rYr6ZuWQMHO51eK94y77&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1543882968&Signature=YSu8avGRdor7sc3fv2QQ3pVBxAI%3D",
+          "description": "You just need to tell Remindy what and where are you keeping your stuff! And Remindy will remember that and tell you the location if you ask :)",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e235/803a0bdafc694240a3d673f39da5411c/APP_ICON_LARGE?versionId=HYAUdBJ7Zpi5FJcz4PvrvpbiBkIL.O8p&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1543882968&Signature=oJOfQdv93%2BWWokLNUU2SCBIAfg4%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "There is no special instructions.\nThe skill calls a lambda which handles the intents.",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "remindyLambda",
+          "sourceDir": "lambda/us-east-1_remindyLambda"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://privacypolicies.com/privacy/view/424940db1e92912dd0625f16b76f6751"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    }
+  }
+}

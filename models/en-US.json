@@ -1,0 +1,273 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "remindy",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SaveIntent",
+          "slots": [
+            {
+              "name": "itemPhrase",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{itemPhrase}",
+                "I am keeping my phone on the table"
+              ]
+            }
+          ],
+          "samples": [
+            "My {itemPhrase}",
+            "I am keeping my {itemPhrase}",
+            "I have kept my {itemPhrase}"
+          ]
+        },
+        {
+          "name": "QueryIntent",
+          "slots": [
+            {
+              "name": "itemPhrase",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Do you know Where is my {itemPhrase}",
+            "Where are my {itemPhrase}",
+            "Find my {itemPhrase}",
+            "Where did I keep my {itemPhrase}",
+            "Where is my {itemPhrase}"
+          ]
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "ThankYouIntent",
+          "slots": [],
+          "samples": [
+            "awesome thank you",
+            "okay thank you",
+            "got it",
+            "thanks",
+            "thank you"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "coffee mug"
+              }
+            },
+            {
+              "name": {
+                "value": "food"
+              }
+            },
+            {
+              "name": {
+                "value": "pop corn"
+              }
+            },
+            {
+              "name": {
+                "value": "iphone"
+              }
+            },
+            {
+              "name": {
+                "value": "wallet"
+              }
+            },
+            {
+              "name": {
+                "value": "phone"
+              }
+            }
+          ],
+          "name": "ItemType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "office"
+              }
+            },
+            {
+              "name": {
+                "value": "table"
+              }
+            },
+            {
+              "name": {
+                "value": "fridge"
+              }
+            }
+          ],
+          "name": "LocationType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "over"
+              }
+            },
+            {
+              "name": {
+                "value": "under"
+              }
+            },
+            {
+              "name": {
+                "value": "on"
+              }
+            },
+            {
+              "name": {
+                "value": "at"
+              }
+            },
+            {
+              "name": {
+                "value": "in"
+              }
+            }
+          ],
+          "name": "PrepositionType"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SaveIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1344219756575"
+          },
+          "slots": [
+            {
+              "name": "itemPhrase",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1003261998512.865801280525"
+              }
+            }
+          ]
+        },
+        {
+          "name": "QueryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "itemPhrase",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1351657551661.164928695480"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.1344219756575",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So, You have kept your {itemPhrase} right?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Just to Confirm, You have kept your {itemPhrase} , Right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1377012041982.1229636638826",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you want to save today?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.174894023710.455610812521",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Where are you keeping {item}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.772779220509.1381142770486",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are you finding?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1351657551661.164928695480",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are you searching for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1003261998512.865801280525",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please tell me what are you keeping and where"
+          }
+        ]
+      }
+    ]
+  }
+}

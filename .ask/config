@@ -1,0 +1,33 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.af868460-b2df-417a-84c0-5b5222bc8acc",
+      "was_cloned": true,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "f65897adb6d3fa4b1adc4f9c9cb40cb5"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "b2cfc02f7f8713600876e07fe67744d5"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:854315252123:function:remindyLambda",
+            "awsRegion": "us-east-1",
+            "functionName": "remindyLambda",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "6821b837-d57b-451b-beac-7a5e2df88367",
+            "codeUri": "lambda/us-east-1_remindyLambda",
+            "handler": "request_handler.request_handler",
+            "runtime": "python3.6"
+          }
+        ]
+      }
+    }
+  }
+}
